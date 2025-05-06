@@ -1,8 +1,8 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
 
-import { airplaneController } from '../../controllers/index.js';
+const { airplaneController } = require('../../controllers/index.js');
 
 router.post('/', airplaneController.createAirplane);
 
-export default router;
+module.exports = router;

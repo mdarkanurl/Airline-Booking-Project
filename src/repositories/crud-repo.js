@@ -1,4 +1,4 @@
-import { logger } from '../config/logger-config.js';
+const { logger } = require('../config/logger-config.js');
 
 class CrudRepo {
     constructor(model) {
@@ -7,6 +7,7 @@ class CrudRepo {
 
     async create(data) {
         try {
+            console.log(data);
             const response = await this.model.create(data);
             return response;
         } catch (error) {
@@ -64,4 +65,4 @@ class CrudRepo {
     }
 }
 
-export default CrudRepo;
+module.exports = CrudRepo;

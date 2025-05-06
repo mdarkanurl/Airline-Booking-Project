@@ -1,4 +1,4 @@
-import infoController from "./info-controller.js";
-import airplaneController from "./airplane-controller.js";
-
-export { infoController, airplaneController }
+module.exports = {
+    infoControolers: require('./info-controller'),
+    airplaneControllers: require('./airplane-controller')
+};

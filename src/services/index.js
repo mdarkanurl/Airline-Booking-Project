@@ -1,4 +1,5 @@
-import { createAirplane } from './airplane-service.js';
+const { createAirplane } = require('./airplane-service.js');
+
 const AirplaneService = { createAirplane };
 
-export { AirplaneService };
+module.exports = { AirplaneService };

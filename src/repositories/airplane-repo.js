@@ -1,5 +1,5 @@
-import CrudRepo from './crud-repo.js';
-import Airplane from '../models/airplane.js';
+const CrudRepo = require('./crud-repo.js');
+const Airplane = require('../models');
 
 class AirplaneRepo extends CrudRepo {
     constructor() {
@@ -7,4 +7,4 @@ class AirplaneRepo extends CrudRepo {
     }
 }
 
-export default AirplaneRepo;
+module.exports = AirplaneRepo;

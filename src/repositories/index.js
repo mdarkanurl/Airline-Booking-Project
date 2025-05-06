@@ -1,4 +1,4 @@
-import CrudRepo from './crud-repo.js';
-import AirplaneRepo from './airplane-repo.js';
+const CrudRepo = require('./crud-repo.js');
+const AirplaneRepo = require('./airplane-repo.js');
 
-export { CrudRepo, AirplaneRepo };
+module.exports = { CrudRepo, AirplaneRepo };

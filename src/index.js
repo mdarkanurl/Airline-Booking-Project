@@ -1,12 +1,13 @@
-import express from 'express';
+const express = require('express');
 const app = express();
-import { PORT, logger } from './config/index.js';
 
-// Middelwares
+const { PORT, logger } = require('./config/index.js');
+
+// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-import apiRoutes from './routes/index.js';
+const apiRoutes = require('./routes/index.js');
 
 app.use('/api', apiRoutes);
 

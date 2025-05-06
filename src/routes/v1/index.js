@@ -1,10 +1,9 @@
-import express from 'express';
-import { infoController } from '../../controllers/index.js';
-import airplaneRoutes from './airplane-routes.js';
+const express = require('express');
+const { infoControolers, airplaneControllers } = require('../../controllers');
 const router = express.Router();
 
-router.use('/airplanes', airplaneRoutes);
+router.use('/airplanes', airplaneControllers.createAirplane);
 
-router.get('/info', infoController)
+router.get('/info', infoControolers.info);
 
-export default router;
+module.exports = router;

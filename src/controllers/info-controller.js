@@ -1,4 +1,4 @@
-import { StatusCodes } from 'http-status-codes';
+const { StatusCodes } = require('http-status-codes');
 
 const info = (req, res) => {
     return res.status(StatusCodes.OK).json({
@@ -7,6 +7,6 @@ const info = (req, res) => {
         error: {},
         data: {}
     });
-}
+};
 
-export default info
+module.exports = {info};

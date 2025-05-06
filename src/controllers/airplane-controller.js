@@ -1,7 +1,7 @@
-import { AirplaneService } from '../services/index.js';
-import { StatusCodes } from 'http-status-codes';
+const AirplaneService = require('../services/index.js');
+const { StatusCodes } = require('http-status-codes');
 
-const createAirplane = async (req, res) => {
+async function createAirplane (req, res) {
     try {
         const airplane = await AirplaneService.createAirplane({
             modelNumber: req.body.modelNumber,
@@ -28,4 +28,4 @@ const createAirplane = async (req, res) => {
     }
 }
 
-export default { createAirplane }
+module.exports = {createAirplane};
